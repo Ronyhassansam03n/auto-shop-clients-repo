@@ -7,12 +7,12 @@ const Navber = () => {
 
     const menuItems = <>
 
-        <li><Link>Home</Link></li>
-        <li><Link>Categories</Link></li>
-        <li><Link>Blogs</Link></li>
-        <li><Link>About us</Link></li>
-        <li><Link>Login</Link></li>
-        <li><Link>Sign up</Link></li>
+        <li><Link to='/'>Home</Link></li>
+        <li><Link to='/categories'>Categories</Link></li>
+        <li><Link to='/blogs'>Blogs</Link></li>
+        <li><Link to='/about'>About us</Link></li>
+        <li><Link to='/login'>Login</Link></li>
+        <li><Link to='/signUp'>Sign up</Link></li>
 
     </>
     return (
@@ -35,7 +35,7 @@ const Navber = () => {
                         </ul>
 
                     </div>
-                    <Link > <img className='w-1/4' src={LogoHome} alt=''></img> </Link>
+                    <Link to='/' > <img className='w-1/4' src={LogoHome} alt=''></img> </Link>
                 </div>
 
 
