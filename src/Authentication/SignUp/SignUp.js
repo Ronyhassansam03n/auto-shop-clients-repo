@@ -5,7 +5,7 @@ import SignPic from '../../../src/assets/signup/signpic.gif'
 
 const SignUp = () => {
     return (
-        <div className="hero min-h-screen  mb-10">
+        <div className="hero   mb-10">
   <div className="hero-content flex-col lg:flex-row">
     <div className="text-center lg:text-left">
       <h1 className="text-4xl font-bold text-center mb-5" >Sign Up now!</h1>

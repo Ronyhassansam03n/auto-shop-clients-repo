@@ -5,7 +5,7 @@ import LoginPic from '../../../src/assets/Login/loginpic.webp'
 
 const Login = () => {
     return (
-        <div className="hero min-h-screen  mb-10">
+        <div className="hero  mb-10">
   <div className="hero-content flex-col lg:flex-row">
     <div className="text-center lg:text-left">
       <h1 className="text-4xl text-center font-bold mb-5">Login now!</h1>
