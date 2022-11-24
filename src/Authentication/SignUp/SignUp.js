@@ -23,14 +23,14 @@ const SignUp = () => {
           <label className="label">
             <span className="label-text">Full Name</span>
           </label>
-          <input type="text" placeholder="email" name='name' className="input input-bordered" />
+          <input type="text" placeholder="Name" name='name' className="input input-bordered" />
         </div>
 
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input type="text" placeholder="email" name='email' className="input input-bordered" />
+          <input type="text" placeholder="email" name='email' className="input input-bordered" required />
         </div>
 
 
@@ -38,7 +38,7 @@ const SignUp = () => {
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="text" placeholder="password" name='password' className="input input-bordered" />
+          <input type="text" placeholder="password" name='password' className="input input-bordered" required />
           <label className="label">
             <Link to='/login' className="label-text-alt link link-hover">Already have an account!</Link>
           </label>

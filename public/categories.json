@@ -1,23 +1,58 @@
 [
-    {
-        "_id": 1,
-        "brands": "TESLA CARS",
-        "img" : "https://assets.turbologo.com/blog/en/2019/08/19085026/tesla-car-logo.png",
-        "short" : "The company was incorporated as Tesla Motors, Inc. on July 1, 2003. Best Eletric Car in the World. "
-      },
-    {
-        "_id": 2,
-        "brands": "BMW CARS",
-        "img" : "https://i0.wp.com/otonomhaber.com/wp-content/uploads/2020/03/4930a256603139942c0f6df01b168e9f.jpg?resize=678%2C381&ssl=1",
-        "short" : "Company was renamed to Bayerische Motoren Werke (BMW) in 1922."
-        
-      },
-    {
-        "_id": 3,
-        "brands": "MERCEDES-BENZ CARS ",
-        "img" : " https://www.designyourway.net/blog/wp-content/uploads/2019/11/Mercedes-Benz-logo-cover-1280x720-1-1250x720.jpg",
-        "short" : "Mercedes and sometimes as Benz, is a  commercial vehicle automotive brand established in 1926"
-        
-      }
-   
-  ]
+  {
+    "id": 11,
+    "category_brands": 1,
+    "brands": "TESLA CARS",
+    "img": "https://assets.turbologo.com/blog/en/2019/08/19085026/tesla-car-logo.png",
+    "short": "The company was incorporated as Tesla Motors, Inc. on July 1, 2003. Best Eletric Car in the World. "
+  },
+  {
+    "category_brands": 1,
+    "brands": "TESLA CARS",
+    "img": "https://assets.turbologo.com/blog/en/2019/08/19085026/tesla-car-logo.png",
+    "short": "The company was incorporated as Tesla Motors, Inc. on July 1, 2003. Best Eletric Car in the World. "
+  },
+  {
+    "category_brands": 1,
+    "brands": "TESLA CARS",
+    "img": "https://assets.turbologo.com/blog/en/2019/08/19085026/tesla-car-logo.png",
+    "short": "The company was incorporated as Tesla Motors, Inc. on July 1, 2003. Best Eletric Car in the World. "
+  },
+  {
+    "id": 22,
+    "category_brands": 2,
+    "brands": "BMW CARS",
+    "img": "https://i0.wp.com/otonomhaber.com/wp-content/uploads/2020/03/4930a256603139942c0f6df01b168e9f.jpg?resize=678%2C381&ssl=1",
+    "short": "Company was renamed to Bayerische Motoren Werke (BMW) in 1922."
+  },
+  {
+    "category_brands": 2,
+    "brands": "BMW CARS",
+    "img": "https://i0.wp.com/otonomhaber.com/wp-content/uploads/2020/03/4930a256603139942c0f6df01b168e9f.jpg?resize=678%2C381&ssl=1",
+    "short": "Company was renamed to Bayerische Motoren Werke (BMW) in 1922."
+  },
+  {
+    "category_brands": 2,
+    "brands": "BMW CARS",
+    "img": "https://i0.wp.com/otonomhaber.com/wp-content/uploads/2020/03/4930a256603139942c0f6df01b168e9f.jpg?resize=678%2C381&ssl=1",
+    "short": "Company was renamed to Bayerische Motoren Werke (BMW) in 1922."
+  },
+  { "id" :33,
+    "category_brands": 3,
+    "brands": "MERCEDES-BENZ CARS ",
+    "img": " https://www.designyourway.net/blog/wp-content/uploads/2019/11/Mercedes-Benz-logo-cover-1280x720-1-1250x720.jpg",
+    "short": "Mercedes and sometimes as Benz, is a  commercial vehicle automotive brand established in 1926"
+  },
+  {
+    "category_brands": 3,
+    "brands": "MERCEDES-BENZ CARS ",
+    "img": " https://www.designyourway.net/blog/wp-content/uploads/2019/11/Mercedes-Benz-logo-cover-1280x720-1-1250x720.jpg",
+    "short": "Mercedes and sometimes as Benz, is a  commercial vehicle automotive brand established in 1926"
+  },
+  {
+    "category_brands": 3,
+    "brands": "MERCEDES-BENZ CARS ",
+    "img": " https://www.designyourway.net/blog/wp-content/uploads/2019/11/Mercedes-Benz-logo-cover-1280x720-1-1250x720.jpg",
+    "short": "Mercedes and sometimes as Benz, is a  commercial vehicle automotive brand established in 1926"
+  }
+]
