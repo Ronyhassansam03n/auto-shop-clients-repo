@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import Categorycard from '../../../../Card/CategoryCard/Categorycard';
 import { useQuery } from '@tanstack/react-query';
 
@@ -10,7 +9,7 @@ const {data:categories = [] } = useQuery({
     queryKey: ['categories'],
 
     queryFn: async() =>{
-        const res = await fetch('http://localhost:5000/brandsCategories')
+        const res = await fetch(`http://localhost:5000/brandsCategories`)
         const data = await res.json()
         return data;
 
@@ -27,7 +26,7 @@ const {data:categories = [] } = useQuery({
                 {
                  
                    categories.map( category => <Categorycard
-                   key={category.id}
+                   key={category._id}
                    category={category}
                    ></Categorycard>)
                 }

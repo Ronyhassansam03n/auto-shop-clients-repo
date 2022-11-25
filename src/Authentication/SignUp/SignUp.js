@@ -1,12 +1,23 @@
 import React from 'react';
+import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import SignPic from '../../../src/assets/signup/signpic.gif'
 
 
 const SignUp = () => {
+
+  const { register, handleSubmit } = useForm();
+  const handleSignUp = data => {
+
+    console.log(data)
+  }
+
     return (
+
         <div className="hero   mb-10">
+          <form onSubmit={handleSubmit(handleSignUp)}>
   <div className="hero-content flex-col lg:flex-row">
+  
     <div className="text-center lg:text-left">
       <h1 className="text-4xl font-bold text-center mb-5" >Sign Up now!</h1>
 
@@ -23,14 +34,14 @@ const SignUp = () => {
           <label className="label">
             <span className="label-text">Full Name</span>
           </label>
-          <input type="text" placeholder="Name" name='name' className="input input-bordered" />
+          <input type="text"  {...register("name")} placeholder="Name"  className="input input-bordered" />
         </div>
 
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input type="text" placeholder="email" name='email' className="input input-bordered" required />
+          <input type="text"  {...register("email")} placeholder="email" name='email' className="input input-bordered" required />
         </div>
 
 
@@ -38,7 +49,7 @@ const SignUp = () => {
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="text" placeholder="password" name='password' className="input input-bordered" required />
+          <input type="text"   {...register("password")} placeholder="password" name='password' className="input input-bordered" required />
           <label className="label">
             <Link to='/login' className="label-text-alt link link-hover">Already have an account!</Link>
           </label>
@@ -51,7 +62,9 @@ const SignUp = () => {
         </div>
       </div>
     </div>
+ 
   </div>
+  </form>
 </div>
     );
 };
