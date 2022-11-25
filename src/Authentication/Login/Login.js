@@ -1,8 +1,9 @@
 
+import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import LoginPic from '../../../src/assets/Login/loginpic.webp'
 import { AuthContext } from '../Contexts/AuthProvider';
 
@@ -11,8 +12,14 @@ const Login = () => {
 
   const { register, formState: { errors }, handleSubmit } = useForm();
 
-  const { signIn } = useContext(AuthContext)
-  const navigation = useNavigate()
+  const { signIn, providerLogin } = useContext(AuthContext)
+  const googleProvider = new GoogleAuthProvider()
+  const navigation = useNavigate();
+  const location = useLocation();
+
+  const from = location.state?.from?.pathName || '/';
+
+
 
   const handleLogin = data => {
 
@@ -22,15 +29,28 @@ const Login = () => {
         const user = result.user;
         console.log(user)
         toast.success('user login successfully')
-        navigation('/')
-        
+        navigation(from, { replace: true });
+
       })
 
       .catch(error => console.log(error))
 
-
-
   }
+
+
+  const googleLogin = () => {
+    providerLogin(googleProvider)
+      .then(result => {
+        const user = result.user
+        console.log(user)
+        toast.success('user login successfully')
+        navigation(from, { replace: true });
+
+      })
+
+      .catch(error => console.log(error))
+  }
+
 
   return (
     <div className="hero  mb-10">
@@ -91,7 +111,7 @@ const Login = () => {
             </form>
 
             <div className="divider">OR</div>
-            <button className="btn btn-outline ">Login Via google</button>
+            <button onClick={googleLogin} className="btn btn-outline ">Login Via google</button>
           </div>
 
 

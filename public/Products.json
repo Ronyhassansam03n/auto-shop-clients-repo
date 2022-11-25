@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Tesla Model S",
+        "location": "UK",
+        "resale": "35,000",
+        "original": "58,000",
+        "year": "2 yr.",
+        "seller": "Richard klinton",
+        "img": "https://platform.cstatic-images.com/large/in/v2/205b4e47-97f6-584e-afa2-ddc4037ca458/d8fe575d-4221-46e4-b579-240998a54ea3/vJORepG2DQ5tksFcmZJdLAdMft0.jpg"
+    },
+    {
+        "name": "Tesla Model 3 Long Range",
+        "location": "USA",
+        "resale": "38,000",
+        "original": "56,000",
+        "year": "1 yr.",
+        "seller": "Harry lotis",
+        "img": "https://media.ed.edmunds-media.com/tesla/model-3/2022/oem/2022_tesla_model-3_sedan_performance_fq_oem_1_815.jpg"
+    },
+    {
+        "name": "BMW X5",
+        "location": "New York",
+        "resale": "85,000",
+        "original": "50,000",
+        "year": "1 yr.",
+        "seller": "Chandan Kumar",
+        "img": "https://media.ed.edmunds-media.com/bmw/x5/2021/oem/2021_bmw_x5_4dr-suv_m50i_fq_oem_1_815.jpg"
+    },
+    {
+        "name": "BMW 5 Series",
+        "location": "Washinton DC ",
+        "resale": "75,000",
+        "original": "58,000",
+        "year": "2 yr.",
+        "seller": "Abu Hossain",
+        "img": "https://media.ed.edmunds-media.com/bmw/5-series/2021/oem/2021_bmw_5-series_sedan_530e_fq_oem_1_815.jpg"
+    },
+    {
+        "name": "Mercedes-Benz GLE-Class Model S",
+        "location": " New Jersary",
+        "resale": "119,000",
+        "original": "80,000",
+        "year": "1 yr.",
+        "seller": "Alex Nishimoto",
+        "img" : "https://media.ed.edmunds-media.com/mercedes-benz/gle-class/2021/oem/2021_mercedes-benz_gle-class_4dr-suv_amg-gle-53_fq_oem_1_815.jpg"
+    },
+    {
+        "name": "Mercedes-Benz E-Class",
+        "location": "UK",
+        "resale": "75,000",
+        "original": "58,000",
+        "year": "1 yr.",
+        "seller": "Richard walker",
+        "img" : "https://media.ed.edmunds-media.com/mercedes-benz/e-class/2021/oem/2021_mercedes-benz_e-class_sedan_amg-e-53_fq_oem_1_815.jpg"
+    }
+]

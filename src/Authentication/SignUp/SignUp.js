@@ -9,7 +9,7 @@ import { AuthContext } from '../Contexts/AuthProvider';
 const SignUp = () => {
   
   const { register, handleSubmit } = useForm();
-  const {createUser} = useContext(AuthContext)
+  const {createUser, updateUser} = useContext(AuthContext)
   const navigation = useNavigate()
   
   
@@ -22,6 +22,15 @@ const SignUp = () => {
         console.log(user)
         toast.success('user create successfully')
         navigation('/')
+
+        const userInfo= {
+          displayName : data.name
+        }
+        updateUser(userInfo)
+        .then(()=>{})
+        .catch(error => console.log(error))
+
+       
 
 
     })

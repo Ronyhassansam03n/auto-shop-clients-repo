@@ -1,17 +1,22 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,  useNavigate,  } from 'react-router-dom';
 import LogoHome from '../../../assets/homelogo/360_F_299134059_j7cI3ZKP7wLpbiZ7RKrr6MrANfVntlHT.jpg'
 import { AuthContext } from '../../../Authentication/Contexts/AuthProvider';
+import toast from 'react-hot-toast';
 
 const Navber = () => {
 
 const {user, logOut} = useContext(AuthContext)
+const navigation = useNavigate();
+
 
 const handleLogOut =() =>{
 
     logOut()
     .then(() =>{})
-    .catech(error => console.log(error))
+    .catch(error => console.log(error))
+    toast.success('Logout successfully')
+    navigation('/');
 }
 
 

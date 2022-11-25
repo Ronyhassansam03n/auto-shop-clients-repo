@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Login from "../Authentication/Login/Login";
+import PrivateRoute from "../Authentication/PrivateRoute/PrivateRoute";
 import SignUp from "../Authentication/SignUp/SignUp";
 import Products from "../Card/Products/Products";
 import Main from "../Layout/Main/Main";
@@ -52,17 +53,17 @@ const router = createBrowserRouter([
                 path: '/signUp',
                 element: <SignUp></SignUp>
 
-               },
-               {
-                path: '/dashboard',
-                element:<DashBoard></DashBoard>
-
-               }
-               
-               
+               } 
             
         ]
-    }
+    },
+    
+    {
+        path: '/dashboard',
+        element:<PrivateRoute><DashBoard></DashBoard></PrivateRoute>
+
+       }
+
 
 
 ])
