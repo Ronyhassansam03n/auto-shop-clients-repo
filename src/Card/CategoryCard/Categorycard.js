@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Categorycard = ({ category }) => {
+const Categorycard = ({ category,  }) => {
 
-    const { brands, img, short } = category;
+    const { _id, brands, img, short } = category;
 
 
     return (
@@ -15,7 +16,7 @@ const Categorycard = ({ category }) => {
                     <h2 className="card-title">{brands}</h2>
                     <p> {short}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-outline btn-sm">Buy Now</button>
+               <Link to={`/products/${_id}`}><button  className="btn btn-outline btn-sm">Buy Now</button></Link>         
                     </div>
                 </div>
             </div>
