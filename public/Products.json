@@ -1,6 +1,7 @@
 [
     {
         "name": "Tesla Model S",
+        "brands": "TESLA CARS",
         "location": "UK",
         "resale": "35,000",
         "original": "58,000",
@@ -10,6 +11,7 @@
     },
     {
         "name": "Tesla Model 3 Long Range",
+        "brands": "TESLA CARS",
         "location": "USA",
         "resale": "38,000",
         "original": "56,000",
@@ -19,6 +21,7 @@
     },
     {
         "name": "BMW X5",
+        "brands": "BMW CARS",
         "location": "New York",
         "resale": "85,000",
         "original": "50,000",
@@ -28,6 +31,7 @@
     },
     {
         "name": "BMW 5 Series",
+        "brands": "BMW CARS",
         "location": "Washinton DC ",
         "resale": "75,000",
         "original": "58,000",
@@ -37,6 +41,7 @@
     },
     {
         "name": "Mercedes-Benz GLE-Class Model S",
+        "brands": "MERCEDES-BENZ CARS ",
         "location": " New Jersary",
         "resale": "119,000",
         "original": "80,000",
@@ -46,6 +51,7 @@
     },
     {
         "name": "Mercedes-Benz E-Class",
+        "brands": "MERCEDES-BENZ CARS ",
         "location": "UK",
         "resale": "75,000",
         "original": "58,000",

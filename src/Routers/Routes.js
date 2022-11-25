@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Login from "../Authentication/Login/Login";
 import PrivateRoute from "../Authentication/PrivateRoute/PrivateRoute";
 import SignUp from "../Authentication/SignUp/SignUp";
-import Products from "../Card/Products/Products";
+import Categorry from "../Card/Category/Category";
 import Main from "../Layout/Main/Main";
 import About from "../Pages/Common/Header/AboutUs/About";
 import Blogs from "../Pages/Common/Header/Blogs/Blogs";
@@ -16,53 +16,54 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
-        children:[
-            
-               {
+        children: [
+
+            {
 
                 path: '/',
                 element: <Home></Home>
-                
-               },
-               {
+
+            },
+            {
                 path: '/categories',
                 element: <Categories></Categories>
 
-               },
-               
-               {
-                        path : '/products/:id',
-                        element: <Products></Products>
-               },
+            },
 
-               {
+            {
+                path: '/categories/:id',
+                element: <Categorry />,
+                loader: async ({ params }) => fetch(`http://localhost:5000/products-car?brands=${params.id}`)
+            },
+
+            {
                 path: '/blogs',
                 element: <Blogs></Blogs>
 
-               },
-               {
+            },
+            {
                 path: '/about',
                 element: <About></About>
 
-               },
-               {
-                path:'/login',
+            },
+            {
+                path: '/login',
                 element: <Login></Login>
-               },
-               {
+            },
+            {
                 path: '/signUp',
                 element: <SignUp></SignUp>
 
-               } 
-            
+            }
+
         ]
     },
-    
+
     {
         path: '/dashboard',
-        element:<PrivateRoute><DashBoard></DashBoard></PrivateRoute>
+        element: <PrivateRoute><DashBoard></DashBoard></PrivateRoute>
 
-       }
+    }
 
 
 
