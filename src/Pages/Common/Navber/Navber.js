@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import LogoHome from '../../../assets/homelogo/360_F_299134059_j7cI3ZKP7wLpbiZ7RKrr6MrANfVntlHT.jpg'
+import { AuthContext } from '../../../Authentication/Contexts/AuthProvider';
 
 const Navber = () => {
+
+const {user, logOut} = useContext(AuthContext)
+
+const handleLogOut =() =>{
+
+    logOut()
+    .then(() =>{})
+    .catech(error => console.log(error))
+}
 
 
     const menuItems = <>
@@ -11,8 +21,21 @@ const Navber = () => {
         <li><Link to='/categories'>Categories</Link></li>
         <li><Link to='/blogs'>Blogs</Link></li>
         <li><Link to='/about'>About us</Link></li>
-        <li><Link to='/login'>Login</Link></li>
-        <li><Link to='/signUp'>Sign up</Link></li>
+
+
+        {user?
+             <>
+           <li><Link to='/dashboard'>Dashboard</Link></li>
+           <li><button onClick={handleLogOut}> Logout</button></li>
+           </>
+           :
+           <>
+
+           <li><Link to='/login'>Login</Link></li>
+           <li><Link to='/signUp'>Sign up</Link></li>
+           </>
+        }
+      
 
     </>
     return (
