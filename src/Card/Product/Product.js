@@ -23,7 +23,7 @@ const Product = ({ car }) => {
 
                     <h2 className="card-title text-error font-semibold"> {name} </h2>
 
-                    <p> Brand Name :{brands}</p>
+                    <p> Brand Name : {brands}</p>
                     <p> Location : {location}</p>
                     <p> Resale Price : ${resale} </p>
                     <p> Original Price : ${original}</p>
