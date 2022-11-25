@@ -6,6 +6,7 @@ import Main from "../Layout/Main/Main";
 import About from "../Pages/Common/Header/AboutUs/About";
 import Blogs from "../Pages/Common/Header/Blogs/Blogs";
 import Categories from "../Pages/Common/Header/Categories/Categories";
+import DashBoard from "../Pages/Dashboard/Dashboard/DashBoard";
 import Home from "../Pages/Home/Home";
 
 
@@ -50,6 +51,11 @@ const router = createBrowserRouter([
                {
                 path: '/signUp',
                 element: <SignUp></SignUp>
+
+               },
+               {
+                path: '/dashboard',
+                element:<DashBoard></DashBoard>
 
                }
                

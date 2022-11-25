@@ -1,7 +1,8 @@
 
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import toast from 'react-hot-toast';
+import { Link, useNavigate } from 'react-router-dom';
 import LoginPic from '../../../src/assets/Login/loginpic.webp'
 import { AuthContext } from '../Contexts/AuthProvider';
 
@@ -11,6 +12,7 @@ const Login = () => {
   const { register, formState: { errors }, handleSubmit } = useForm();
 
   const { signIn } = useContext(AuthContext)
+  const navigation = useNavigate()
 
   const handleLogin = data => {
 
@@ -19,6 +21,9 @@ const Login = () => {
       .then(result => {
         const user = result.user;
         console.log(user)
+        toast.success('user login successfully')
+        navigation('/')
+        
       })
 
       .catch(error => console.log(error))
