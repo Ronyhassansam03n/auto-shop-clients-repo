@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Product = ({ car }) => {
+const Product = ({ car, setBook }) => {
 
 
     const { name, brands, location, resale, original, year, seller, img } = car;
@@ -34,7 +34,14 @@ const Product = ({ car }) => {
                     <div className="card-actions">
 
                         <button className="btn btn-black btn-outline btn-sm">Report</button>
-                        <label htmlFor="buy-modal" className="btn btn-black btn-outline btn-sm">Add to Cart</label>
+                        <label
+
+                            htmlFor="buy-modal"
+
+                            className="btn btn-black btn-outline btn-sm"
+
+                            onClick={() => setBook(car)}
+                        >Add to Cart</label>
 
                     </div>
                 </div>

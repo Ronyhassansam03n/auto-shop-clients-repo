@@ -32,7 +32,7 @@ const router = createBrowserRouter([
 
             {
                 path: '/categories/:id',
-                element: <Categorry />,
+                element: <PrivateRoute><Categorry /></PrivateRoute>,
                 loader: async ({ params }) => fetch(`http://localhost:5000/products-car?brands=${params.id}`)
             },
 

@@ -9,7 +9,7 @@ const Categorycard = ({ category }) => {
     return (
 
 
-        <div className='md: mx-auto' >
+        <div className='md:mx-auto' >
             <div className="card w-80 bg-base-200 shadow-xl mt-5 mb-10">
                 <figure><img className='w-full' src={img} alt="Shoes" /></figure>
                 <div className="card-body">

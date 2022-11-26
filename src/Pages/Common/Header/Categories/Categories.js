@@ -20,9 +20,9 @@ const Categories = () => {
 
     return (
         <div>
-            <h1 className='text-4xl font-bold  mb-5 md: text-2xl mt-5'> Our Brands Categories</h1>
+            <h1 className=' lg:text-4xl font-bold  mb-5 md:text-2xl mt-5'> Our Brands Categories</h1>
 
-            <div className='grid   grid-cols-1  md: grid-cols-1 md: mx-auto lg: grid-cols-3'>
+            <div className='grid  grid-cols-1  md:grid-cols-1 lg:grid-cols-3 '>
 
                 {
 

@@ -5,7 +5,7 @@ import ErrorPage from '../../../../assets/404page/404page.webp'
 
 const About = () => {
     return (
-        <div className='flex md: grid'>
+        <div className='flex md: grid '>
             <div>
 
                 <img src={ErrorPage} alt=''></img>

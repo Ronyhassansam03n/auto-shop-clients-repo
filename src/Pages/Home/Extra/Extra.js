@@ -10,7 +10,7 @@ const Extra = () => {
 
 
 
-      <h1 className='text-4xl font-bold mt-5 mb-5 md: text-2xl mt-5'> Did You Know, Before You Buy !</h1>
+      <h1 className='lg:text-4xl font-bold mt-5 mb-5 md: text-2xl mt-5'> Did You Know, Before You Buy !</h1>
 
       <div className="card lg:card-side bg-base-100 shadow-xl">
         <figure><img src={Extrapic} alt="Album" /></figure>
