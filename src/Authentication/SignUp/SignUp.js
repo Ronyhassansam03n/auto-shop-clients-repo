@@ -10,6 +10,7 @@ const SignUp = () => {
 
   const { register, handleSubmit } = useForm();
   const { createUser, updateUser } = useContext(AuthContext)
+
   const navigation = useNavigate()
 
 
@@ -33,7 +34,6 @@ const SignUp = () => {
         }
 
         updateUser(userInfo)
-
           .then(() => {
             saveUser(data.name, data.email)
           })
@@ -41,7 +41,10 @@ const SignUp = () => {
 
 
       })
-      .catch(error => console.log(error))
+      .catch(error => {
+        console.log(error)
+
+      });
   }
 
   const saveUser = (name, email) => {
@@ -59,11 +62,27 @@ const SignUp = () => {
     })
       .then(res => res.json())
       .then(data => {
-        console.log(data);
-        navigation('/')
+
+        getUserToken(email);
+
+
+
       })
   }
 
+
+
+  const getUserToken = email => {
+    fetch(`http://localhost:5000/jwt?email=${email}`)
+      .then(res => res.json())
+      .then(data => {
+        if (data.accessToken) {
+          navigation('/')
+          localStorage.setItem('accessToken', data.accessToken)
+
+        }
+      })
+  }
 
 
   return (
@@ -103,7 +122,7 @@ const SignUp = () => {
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input type="text"   {...register("password")} placeholder="password" name='password' className="input input-bordered" required />
+                <input type="password"   {...register("password")} placeholder="password" name='password' className="input input-bordered" required />
                 <label className="label">
                   <Link to='/login' className="label-text-alt link link-hover">Already have an account!</Link>
                 </label>

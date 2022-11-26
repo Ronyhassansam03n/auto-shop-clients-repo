@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Authentication/Contexts/AuthProvider';
 
-
 const MyOrders = () => {
     const { user } = useContext(AuthContext)
 
@@ -9,7 +8,11 @@ const MyOrders = () => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:5000/bookings?email=${user?.email}`)
+        fetch(`http://localhost:5000/bookings?email=${user?.email}`, {
+            headers: {
+                authorization: `bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [user?.email])
@@ -37,11 +40,10 @@ const MyOrders = () => {
                     </thead>
                     <tbody>
                         {
-                            orders.map((order, i) => <tr>
+                            orders?.map((order, i) => <tr>
+
                                 <th>{i + 1}</th>
                                 <td>
-
-
                                     <img className="mask mask-squircle w-12 h-12 avatar" src={order.picture} alt="Avatar" />
                                 </td>
                                 <td>{order.carName}</td>
