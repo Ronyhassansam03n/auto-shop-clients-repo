@@ -13,12 +13,14 @@ const BuyModal = ({ book, setBook }) => {
         event.preventDefault()
 
         const form = event.target;
+        const email = form.email.value;
         const phone = form.phone.value;
         const location = form.location.value;
 
         const bookingCar = {
 
             carName: name,
+            email,
             picture: img,
             sellPrice: resale,
             meeting: location,
@@ -62,7 +64,7 @@ const BuyModal = ({ book, setBook }) => {
 
 
                         <input type="text" disabled value={user.displayName} className="input input-bordered" />
-                        <input type="email" disabled value={user.email} className="input input-bordered" />
+                        <input name='email' type="email" disabled value={user.email} className="input input-bordered" />
                         <input name='name' type="text" disabled value={name} className="input input-bordered" />
                         <input name='location' type="text" placeholder=" Meeting Location" className="input input-bordered" />
                         <input name='phone' type="text" placeholder="Phone Number" className="input input-bordered" />

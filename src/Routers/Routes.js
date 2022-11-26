@@ -4,6 +4,7 @@ import Login from "../Authentication/Login/Login";
 import PrivateRoute from "../Authentication/PrivateRoute/PrivateRoute";
 import SignUp from "../Authentication/SignUp/SignUp";
 import Categorry from "../Card/Category/Category";
+import DashboardLayout from "../Layout/DashboradLayout/DashboardLayout";
 import Main from "../Layout/Main/Main";
 import About from "../Pages/Common/Header/AboutUs/About";
 import Blogs from "../Pages/Common/Header/Blogs/Blogs";
@@ -62,7 +63,15 @@ const router = createBrowserRouter([
 
     {
         path: '/dashboard',
-        element: <PrivateRoute><DashBoard></DashBoard></PrivateRoute>
+        element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
+        children: [
+
+            {
+
+                path: '/dashboard',
+                element: <DashBoard></DashBoard>
+            }
+        ]
 
     }
 

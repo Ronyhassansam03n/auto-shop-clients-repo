@@ -1,23 +1,23 @@
 import React, { useContext } from 'react';
-import { Link,  useNavigate,  } from 'react-router-dom';
+import { Link, useNavigate, } from 'react-router-dom';
 import LogoHome from '../../../assets/homelogo/360_F_299134059_j7cI3ZKP7wLpbiZ7RKrr6MrANfVntlHT.jpg'
 import { AuthContext } from '../../../Authentication/Contexts/AuthProvider';
 import toast from 'react-hot-toast';
 
 const Navber = () => {
 
-const {user, logOut} = useContext(AuthContext)
-const navigation = useNavigate();
+    const { user, logOut } = useContext(AuthContext)
+    const navigation = useNavigate();
 
 
-const handleLogOut =() =>{
+    const handleLogOut = () => {
 
-    logOut()
-    .then(() =>{})
-    .catch(error => console.log(error))
-    toast.success('Logout successfully')
-    navigation('/');
-}
+        logOut()
+            .then(() => { })
+            .catch(error => console.log(error))
+        toast.success('Logout successfully')
+        navigation('/');
+    }
 
 
     const menuItems = <>
@@ -28,19 +28,19 @@ const handleLogOut =() =>{
         <li><Link to='/about'>About us</Link></li>
 
 
-        {user?
-             <>
-           <li><Link to='/dashboard'>Dashboard</Link></li>
-           <li><button onClick={handleLogOut}> Logout</button></li>
-           </>
-           :
-           <>
+        {user ?
+            <>
+                <li><Link to='/dashboard'>Dashboard</Link></li>
+                <li><button onClick={handleLogOut}> Logout</button></li>
+            </>
+            :
+            <>
 
-           <li><Link to='/login'>Login</Link></li>
-           <li><Link to='/signUp'>Sign up</Link></li>
-           </>
+                <li><Link to='/login'>Login</Link></li>
+                <li><Link to='/signUp'>Sign up</Link></li>
+            </>
         }
-      
+
 
     </>
     return (
@@ -58,7 +58,7 @@ const handleLogOut =() =>{
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
 
-                        <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box ">
+                        <ul tabIndex={1} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box ">
                             {menuItems}
                         </ul>
 
@@ -76,6 +76,9 @@ const handleLogOut =() =>{
 
                     </ul>
                 </div>
+                <label htmlFor="dash-drawer" tabIndex={2} className="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </label>
 
             </div>
         </div>

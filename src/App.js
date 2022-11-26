@@ -8,11 +8,11 @@ function App() {
 
   return (
 
-    
+
     <div className=' max-w-[1140px] mx-auto' >
 
-     <RouterProvider router={router}></RouterProvider>
-     <Toaster></Toaster>
+      <RouterProvider router={router}></RouterProvider>
+      <Toaster></Toaster>
 
     </div>
   );
