@@ -8,6 +8,8 @@ const Category = () => {
 
     const carData = useLoaderData()
     const [book, setBook] = useState(null)
+    const cars = carData?.data;
+
 
 
 
@@ -20,7 +22,7 @@ const Category = () => {
 
 
                 {
-                    carData.map(car => <Product
+                    cars?.map(car => <Product
                         key={car._id}
                         car={car}
                         setBook={setBook}

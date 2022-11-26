@@ -1,3 +1,4 @@
+import axios from "axios";
 import { createBrowserRouter } from "react-router-dom";
 import Login from "../Authentication/Login/Login";
 import PrivateRoute from "../Authentication/PrivateRoute/PrivateRoute";
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
             {
                 path: '/categories/:id',
                 element: <PrivateRoute><Categorry /></PrivateRoute>,
-                loader: async ({ params }) => fetch(`http://localhost:5000/products-car?brands=${params.id}`)
+                loader: async ({ params }) => axios(`http://localhost:5000/products-car?brands=${params.id}`)
             },
 
             {
