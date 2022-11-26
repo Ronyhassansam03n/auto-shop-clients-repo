@@ -33,7 +33,8 @@ const Product = ({ car }) => {
 
                     <div className="card-actions">
 
-                        <button className="btn btn-black btn-outline">Buy Now</button>
+                        <button className="btn btn-black btn-outline btn-sm">Report</button>
+                        <label htmlFor="buy-modal" className="btn btn-black btn-outline btn-sm">Add to Cart</label>
 
                     </div>
                 </div>
