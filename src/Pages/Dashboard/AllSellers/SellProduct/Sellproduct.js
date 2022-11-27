@@ -36,7 +36,7 @@ const Sellproduct = () => {
         }
 
 
-        fetch('http://localhost:5000/products', {
+        fetch('http://localhost:5000/addProducts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -48,7 +48,6 @@ const Sellproduct = () => {
             .then(data => {
                 console.log(data)
                 if (data.acknowledged) {
-
                     toast.success('Congratulation! Product added')
                     nevigate('/dashboard/myProducts')
                 }

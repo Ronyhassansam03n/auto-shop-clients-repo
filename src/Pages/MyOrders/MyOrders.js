@@ -8,11 +8,7 @@ const MyOrders = () => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:5000/bookings?email=${user?.email}`, {
-            headers: {
-                authorization: `bearer ${localStorage.getItem('accessToken')}`
-            }
-        })
+        fetch(`http://localhost:5000/bookings?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [user?.email])
