@@ -3,6 +3,8 @@ import { Link, Outlet } from 'react-router-dom';
 import Navber from '../../Pages/Common/Navber/Navber';
 
 const DashboardLayout = () => {
+
+
     return (
         <div>
             <Navber></Navber>
