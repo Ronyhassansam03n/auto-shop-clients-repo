@@ -10,8 +10,9 @@ import About from "../Pages/Common/Header/AboutUs/About";
 import Blogs from "../Pages/Common/Header/Blogs/Blogs";
 import Categories from "../Pages/Common/Header/Categories/Categories";
 import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
+import DashBoard from "../Pages/Dashboard/Dashboard/DashBoard";
 import Home from "../Pages/Home/Home";
-import MyOrders from "../Pages/MyOrders/MyOrders";
+
 
 
 const router = createBrowserRouter([
@@ -70,7 +71,7 @@ const router = createBrowserRouter([
             {
 
                 path: '/dashboard',
-                element: <MyOrders></MyOrders>
+                element: <DashBoard></DashBoard>
             },
             {
 
