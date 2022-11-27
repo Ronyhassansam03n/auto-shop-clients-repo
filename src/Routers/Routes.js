@@ -9,8 +9,9 @@ import Main from "../Layout/Main/Main";
 import About from "../Pages/Common/Header/AboutUs/About";
 import Blogs from "../Pages/Common/Header/Blogs/Blogs";
 import Categories from "../Pages/Common/Header/Categories/Categories";
-import DashBoard from "../Pages/Dashboard/Dashboard/DashBoard";
+import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 import Home from "../Pages/Home/Home";
+import MyOrders from "../Pages/MyOrders/MyOrders";
 
 
 const router = createBrowserRouter([
@@ -69,8 +70,13 @@ const router = createBrowserRouter([
             {
 
                 path: '/dashboard',
-                element: <DashBoard></DashBoard>
-            }
+                element: <MyOrders></MyOrders>
+            },
+            {
+
+                path: '/dashboard/allUsers',
+                element: <AllUsers></AllUsers>
+            },
         ]
 
     }
