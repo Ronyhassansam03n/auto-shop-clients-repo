@@ -14,6 +14,7 @@ import Categories from "../Pages/Common/Header/Categories/Categories";
 import AllSellers from "../Pages/Dashboard/AllSellers/AllSellers";
 import Sellproduct from "../Pages/Dashboard/AllSellers/SellProduct/Sellproduct";
 import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
+import Myproducts from "../Pages/Dashboard/MyProducts/Myproducts";
 import Home from "../Pages/Home/Home";
 import MyOrders from "../Pages/MyOrders/MyOrders";
 
@@ -89,8 +90,13 @@ const router = createBrowserRouter([
             },
             {
 
-                path: '/dashboard/myProducts',
+                path: '/dashboard/addProducts',
                 element: <SellerRoute> <Sellproduct></Sellproduct></SellerRoute>
+            },
+            {
+
+                path: '/dashboard/myProducts',
+                element: <SellerRoute> <Myproducts></Myproducts> </SellerRoute>
             },
         ]
 

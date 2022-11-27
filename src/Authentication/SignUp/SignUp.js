@@ -20,7 +20,7 @@ const SignUp = () => {
       .then(result => {
         const user = result.user;
         console.log(user)
-        toast.success('user create successfully')
+
         const userInfo = {
           displayName: data.name,
           account: data.seller
@@ -29,6 +29,7 @@ const SignUp = () => {
         updateUser(userInfo)
           .then(() => {
             saveUser(data.name, data.email, data.seller)
+            toast.success('user create successfully')
           })
           .catch(error => console.log(error))
       })
@@ -52,6 +53,7 @@ const SignUp = () => {
       .then(data => {
         console.log(data)
         navigation('/')
+
       })
   }
 

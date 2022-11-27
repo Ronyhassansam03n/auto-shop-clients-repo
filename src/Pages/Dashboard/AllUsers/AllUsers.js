@@ -1,12 +1,13 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import toast from 'react-hot-toast';
+import Spinner from '../../../Spinner/Spinner';
 
 const AllUsers = () => {
 
 
-    const { data: users = [], refetch } = useQuery({
-        queryKey: ['users'],
+    const { data: users, isLoading, refetch } = useQuery({
+        queryKey: ['user'],
         queryFn: async () => {
             const res = await fetch('http://localhost:5000/users')
             const data = await res.json();
@@ -28,6 +29,10 @@ const AllUsers = () => {
                 }
                 console.log(data)
             })
+    }
+
+    if (isLoading) {
+        return <Spinner></Spinner>
     }
 
 
