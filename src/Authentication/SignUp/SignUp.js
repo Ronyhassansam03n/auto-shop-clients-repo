@@ -23,12 +23,12 @@ const SignUp = () => {
         toast.success('user create successfully')
         const userInfo = {
           displayName: data.name,
-          account: data.radio
+          account: data.seller
         }
+
         updateUser(userInfo)
           .then(() => {
-            navigation('/')
-            saveUser(data.name, data.email, data.radio)
+            saveUser(data.name, data.email, data.seller)
           })
           .catch(error => console.log(error))
       })
@@ -37,9 +37,9 @@ const SignUp = () => {
 
       });
   }
-  const saveUser = (name, email) => {
+  const saveUser = (name, email, seller) => {
 
-    const user = { name, email };
+    const user = { name, email, seller };
     fetch('http://localhost:5000/users', {
       method: 'POST',
       headers: {
@@ -51,6 +51,7 @@ const SignUp = () => {
       .then(res => res.json())
       .then(data => {
         console.log(data)
+        navigation('/')
       })
   }
 
@@ -102,16 +103,17 @@ const SignUp = () => {
               </div>
               <div className="form-control">
                 <label className="label cursor-pointer">
-                  <span className="label-text">Seller Account</span>
-                  <input type="radio"   {...register("radio-10")} name="radio-10" className="radio checked:bg-blue-500" checked />
+                  <span className="label-text">Buyer account</span>
+                  <input type="checkbox" className="toggle" />
                 </label>
               </div>
               <div className="form-control">
                 <label className="label cursor-pointer">
-                  <span className="label-text">Buyer Account</span>
-                  <input type="radio" name="radio-10" className="radio checked:bg-red-500" checked />
+                  <span className="label-text">Seller account</span>
+                  <input type="checkbox" {...register("seller")} name='seller' className="toggle" />
                 </label>
               </div>
+
 
 
 

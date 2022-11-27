@@ -1,11 +1,11 @@
 import React from 'react';
-import MyOrders from '../../MyOrders/MyOrders';
+
 
 
 const DashBoard = () => {
     return (
         <div>
-            <MyOrders></MyOrders>
+            ssss
         </div>
     );
 };
