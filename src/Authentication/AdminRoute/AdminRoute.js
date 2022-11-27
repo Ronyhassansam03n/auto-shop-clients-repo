@@ -8,11 +8,15 @@ import { AuthContext } from '../Contexts/AuthProvider';
 
 
 const AdminRoute = ({ children }) => {
+
+
     const { user, loading } = useContext(AuthContext);
-    const [isAdmin] = useAdmin(user?.email);
+    const [isAdmin, isAdLoading] = useAdmin(user?.email)
+
     const location = useLocation()
 
-    if (loading) {
+
+    if (loading || isAdLoading) {
         return <Spinner></Spinner>
     }
 

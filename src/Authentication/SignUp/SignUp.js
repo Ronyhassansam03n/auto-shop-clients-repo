@@ -8,7 +8,6 @@ import { AuthContext } from '../Contexts/AuthProvider';
 
 
 const SignUp = () => {
-
   const { register, handleSubmit } = useForm();
   const { createUser, updateUser } = useContext(AuthContext)
 
@@ -23,12 +22,13 @@ const SignUp = () => {
         console.log(user)
         toast.success('user create successfully')
         const userInfo = {
-          displayName: data.name
+          displayName: data.name,
+          account: data.radio
         }
         updateUser(userInfo)
           .then(() => {
             navigation('/')
-            saveUser(data.name, data.email)
+            saveUser(data.name, data.email, data.radio)
           })
           .catch(error => console.log(error))
       })
@@ -100,6 +100,19 @@ const SignUp = () => {
                   <Link to='/login' className="label-text-alt link link-hover">Already have an account!</Link>
                 </label>
               </div>
+              <div className="form-control">
+                <label className="label cursor-pointer">
+                  <span className="label-text">Seller Account</span>
+                  <input type="radio"   {...register("radio-10")} name="radio-10" className="radio checked:bg-blue-500" checked />
+                </label>
+              </div>
+              <div className="form-control">
+                <label className="label cursor-pointer">
+                  <span className="label-text">Buyer Account</span>
+                  <input type="radio" name="radio-10" className="radio checked:bg-red-500" checked />
+                </label>
+              </div>
+
 
 
               <div className="form-control mt-6">

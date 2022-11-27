@@ -33,7 +33,7 @@ const AllUsers = () => {
 
     return (
         <div>
-            <h1 className='text-3xl'> all uers of mine</h1>
+            <h1 className='text-3xl mb-5'> All of my Buyers</h1>
 
             <div className="overflow-x-auto">
                 <table className="table w-full">

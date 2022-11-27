@@ -1,5 +1,6 @@
 import axios from "axios";
 import { createBrowserRouter } from "react-router-dom";
+import AdminRoute from "../Authentication/AdminRoute/AdminRoute";
 import Login from "../Authentication/Login/Login";
 import PrivateRoute from "../Authentication/PrivateRoute/PrivateRoute";
 import SignUp from "../Authentication/SignUp/SignUp";
@@ -9,6 +10,7 @@ import Main from "../Layout/Main/Main";
 import About from "../Pages/Common/Header/AboutUs/About";
 import Blogs from "../Pages/Common/Header/Blogs/Blogs";
 import Categories from "../Pages/Common/Header/Categories/Categories";
+import AllSellers from "../Pages/Dashboard/AllSellers/AllSellers";
 import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 import DashBoard from "../Pages/Dashboard/Dashboard/DashBoard";
 import Home from "../Pages/Home/Home";
@@ -76,7 +78,12 @@ const router = createBrowserRouter([
             {
 
                 path: '/dashboard/allUsers',
-                element: <AllUsers></AllUsers>
+                element: <AdminRoute> <AllUsers></AllUsers></AdminRoute>
+            },
+            {
+
+                path: '/dashboard/allSellers',
+                element: <AdminRoute><AllSellers></AllSellers></AdminRoute>
             },
         ]
 
