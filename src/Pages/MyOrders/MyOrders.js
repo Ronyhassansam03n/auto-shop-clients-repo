@@ -14,7 +14,6 @@ const MyOrders = () => {
     }, [user?.email])
 
 
-
     return (
 
 
@@ -32,6 +31,7 @@ const MyOrders = () => {
                             <th>Car Name</th>
                             <th>Price</th>
                             <th>Payment</th>
+                            <th>Detele</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -44,7 +44,8 @@ const MyOrders = () => {
                                 </td>
                                 <td>{order.carName}</td>
                                 <td>$ {order.sellPrice}</td>
-                                <td> <button className="btn btn-black btn-xs">Checkout</button></td>
+                                <td> <button className="btn btn-black btn-outline btn-xs">Checkout</button></td>
+                                <td> <button className="btn btn-black btn-outline btn-xs">Remove</button></td>
                             </tr>)
                         }
                     </tbody>

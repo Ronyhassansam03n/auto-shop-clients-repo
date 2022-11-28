@@ -1,9 +1,15 @@
+
 import React from 'react';
 
+
+
 const AllSellers = () => {
+
+
+
     return (
         <div>
-            all sellers
+            all selller
         </div>
     );
 };
