@@ -11,7 +11,7 @@ const AllSellers = () => {
     const { data: sellers, isLoading, refetch } = useQuery({
         queryKey: ['seller'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/users/seller')
+            const res = await fetch('https://auto-shop-server.vercel.app/users/seller')
             const data = await res.json();
             return data;
         }
@@ -20,7 +20,7 @@ const AllSellers = () => {
 
 
     const handleDelete = id => {
-        fetch(`http://localhost:5000/users/seller/${id}`, {
+        fetch(`https://auto-shop-server.vercel.app/users/seller/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

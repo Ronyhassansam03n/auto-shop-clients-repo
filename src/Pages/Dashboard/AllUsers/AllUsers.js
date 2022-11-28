@@ -10,14 +10,14 @@ const AllUsers = () => {
     const { data: users, isLoading, refetch } = useQuery({
         queryKey: ['user'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/users')
+            const res = await fetch('https://auto-shop-server.vercel.app/users')
             const data = await res.json();
             return data;
         }
     })
 
     const handleAdmin = id => {
-        fetch(`http://localhost:5000/users/admin/${id}`, {
+        fetch(`https://auto-shop-server.vercel.app/users/admin/${id}`, {
             method: 'PUT'
         })
             .then(res => res.json())
@@ -32,7 +32,7 @@ const AllUsers = () => {
     }
 
     const handleDelete = id => {
-        fetch(`http://localhost:5000/users/admin/${id}`, {
+        fetch(`https://auto-shop-server.vercel.app/users/admin/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

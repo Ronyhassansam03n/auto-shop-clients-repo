@@ -9,7 +9,7 @@ const Categories = () => {
         queryKey: ['categories'],
 
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/brandsCategories`)
+            const res = await fetch(`https://auto-shop-server.vercel.app/brandsCategories`)
             const data = await res.json()
             console.log(data)
             return data;

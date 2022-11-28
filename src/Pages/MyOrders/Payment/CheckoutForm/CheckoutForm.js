@@ -10,7 +10,7 @@ const CheckoutForm = ({ bookingPayment }) => {
 
     useEffect(() => {
 
-        fetch("http://localhost:5000/create-payment-intent", {
+        fetch("https://auto-shop-server.vercel.app/create-payment-intent", {
             method: "POST",
             headers: {
 
@@ -50,6 +50,7 @@ const CheckoutForm = ({ bookingPayment }) => {
         else {
             setCardError('');
         }
+        console.log('consolelog for checkout', clientSecret, stripe)
 
         const { paymentIntent, error: confirmError } = await stripe.confirmCardPayment(
             clientSecret,

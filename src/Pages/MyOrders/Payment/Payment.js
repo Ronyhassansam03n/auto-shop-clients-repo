@@ -12,7 +12,7 @@ const Payment = () => {
     const { carName, sellPrice } = bookigPayment;
 
     const stripePromise = loadStripe(process.env.REACT_APP_STRIPE);
-    console.log(stripePromise)
+    console.log(process.env.REACT_APP_STRIPE)
 
     return (
         <div>

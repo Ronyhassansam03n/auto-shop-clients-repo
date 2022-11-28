@@ -9,7 +9,7 @@ const Myproducts = () => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:5000/addProducts?email=${user?.email}`)
+        fetch(`https://auto-shop-server.vercel.app/addProducts?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setAddMyProducts(data))
     }, [user?.email])

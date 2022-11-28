@@ -11,14 +11,14 @@ const MyOrders = () => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:5000/bookings?email=${user?.email}`)
+        fetch(`https://auto-shop-server.vercel.app/bookings?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [user?.email])
 
 
-    const handleDelete = _id => {
-        fetch(`http://localhost:5000/bookings/${_id}`, {
+    const handleDelete = id => {
+        fetch(`https://auto-shop-server.vercel.app/bookings/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -82,6 +82,7 @@ const MyOrders = () => {
 
 
                                 <td> <button onClick={() => handleDelete(order._id)} className="btn btn-black btn-outline btn-xs">Remove</button></td>
+
                             </tr>)
                         }
                     </tbody>
