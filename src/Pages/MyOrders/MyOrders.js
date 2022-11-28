@@ -1,8 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Authentication/Contexts/AuthProvider';
+import Spinner from '../../Spinner/Spinner';
 
 const MyOrders = () => {
-    const { user } = useContext(AuthContext)
+    const { user, isLoading } = useContext(AuthContext)
 
     const [orders, setOrders] = useState([])
 
@@ -12,6 +15,25 @@ const MyOrders = () => {
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [user?.email])
+
+
+    const handleDelete = _id => {
+        fetch(`http://localhost:5000/bookings/${_id}`, {
+            method: 'DELETE'
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount > 0) {
+                    toast.success('Delete Successfully')
+                }
+                console.log(data)
+
+            })
+
+    }
+    if (isLoading) {
+        return <Spinner></Spinner>
+    }
 
 
     return (
@@ -44,8 +66,22 @@ const MyOrders = () => {
                                 </td>
                                 <td>{order.carName}</td>
                                 <td>$ {order.sellPrice}</td>
-                                <td> <button className="btn btn-black btn-outline btn-xs">Checkout</button></td>
-                                <td> <button className="btn btn-black btn-outline btn-xs">Remove</button></td>
+
+
+                                <td>
+
+                                    {
+                                        !order.paid && <Link to={`/dashboard/payment/${order._id}`}>
+                                            <button className="btn btn-black btn-outline btn-xs">Pay</button>
+                                        </Link>
+
+                                    }
+
+
+                                </td>
+
+
+                                <td> <button onClick={() => handleDelete(order._id)} className="btn btn-black btn-outline btn-xs">Remove</button></td>
                             </tr>)
                         }
                     </tbody>
