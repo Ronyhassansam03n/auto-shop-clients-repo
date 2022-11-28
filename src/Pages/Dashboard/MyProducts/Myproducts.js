@@ -16,8 +16,8 @@ const Myproducts = () => {
 
     return (
         <div>
-            <h1 className='text-3xl font-semibold'> Your Products</h1>
-            {addMyProducts.length}
+            <h1 className='text-3xl font-semibold mb-5'> Your Products.</h1>
+
 
             <div className="overflow-x-auto">
                 <table className="table w-full">
