@@ -18,6 +18,9 @@ we also have three panel
 2. SELLERS.
 3. ADMIN.
 
+ADMIN EMAIL : ronyhassansam05n@gmail.com
+ADMIN PASSWORD : 123456
+
 we also have JWT protactor 
 
 This used 404 page .
