@@ -6,11 +6,8 @@ import Product from '../Product/Product';
 
 const Category = () => {
 
-    const carData = useLoaderData()
+    const cars = useLoaderData()
     const [book, setBook] = useState(null)
-    const cars = carData?.data;
-
-
 
 
 

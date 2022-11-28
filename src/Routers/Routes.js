@@ -1,4 +1,4 @@
-import axios from "axios";
+
 import { createBrowserRouter } from "react-router-dom";
 import AdminRoute from "../Authentication/AdminRoute/AdminRoute";
 import Login from "../Authentication/Login/Login";
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
             {
                 path: '/categories/:id',
                 element: <PrivateRoute><Categorry /></PrivateRoute>,
-                loader: async ({ params }) => axios(`https://auto-shop-server.vercel.app/products-car?brands=${params.id}`)
+                loader: ({ params }) => fetch(`https://auto-shop-server.vercel.app/products-car?brands=${params.id}`)
             },
 
             {
