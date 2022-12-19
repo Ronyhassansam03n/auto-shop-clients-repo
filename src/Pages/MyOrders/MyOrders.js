@@ -17,8 +17,8 @@ const MyOrders = () => {
     }, [user?.email])
 
 
-    const handleDelete = id => {
-        fetch(`https://auto-shop-server.vercel.app/bookings/${id}`, {
+    const handleDelete = _id => {
+        fetch(`https://auto-shop-server.vercel.app/bookings/${_id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -53,7 +53,7 @@ const MyOrders = () => {
                             <th>Car Name</th>
                             <th>Price</th>
                             <th>Payment</th>
-                            <th>Detele</th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -77,11 +77,7 @@ const MyOrders = () => {
 
                                     }
 
-
                                 </td>
-
-
-                                <td> <button onClick={() => handleDelete(order._id)} className="btn btn-black btn-outline btn-xs">Remove</button></td>
 
                             </tr>)
                         }
